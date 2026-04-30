@@ -19,7 +19,7 @@ export function CTA() {
 
           <div className="relative z-10 max-w-xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4">
-              Deja de sintetizar talleres a mano.
+              Deja de sintetizar workshops a mano.
               <br />
               <span className="text-[var(--color-accent-cyan)]">Escala tu facilitación hoy.</span>
             </h2>
