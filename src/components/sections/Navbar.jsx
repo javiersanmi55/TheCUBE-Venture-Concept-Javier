@@ -39,7 +39,7 @@ export function Navbar() {
       style={{ backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
     >
       <div className="max-w-[1200px] mx-auto px-8 w-full flex justify-between items-center">
-        <a href="#" className="flex items-center gap-2 text-2xl font-extrabold text-[var(--color-text-primary)] no-underline">
+        <a href="#" className="flex items-center gap-2 text-2xl font-extrabold text-[var(--color-text-primary)] no-underline transition-all duration-300 xl:-ml-[60px]">
           <div className="w-2.5 h-2.5 bg-[var(--color-accent-cyan)] rounded-full shadow-[0_0_10px_var(--color-accent-cyan)]" />
           Synthex
         </a>

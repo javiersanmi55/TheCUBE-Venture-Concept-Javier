@@ -30,7 +30,7 @@ function App() {
       <div
         className="hidden xl:block fixed top-20 bottom-0 pointer-events-none z-0"
         style={{
-          left: 'calc(50% - 600px + 32px)',
+          left: 'calc(50% - 600px - 23px)',
           width: '1px',
           background: 'linear-gradient(to bottom, transparent 0%, rgba(6,182,212,0.25) 8%, rgba(6,182,212,0.25) 92%, transparent 100%)',
         }}
@@ -43,7 +43,7 @@ function App() {
 
       {/* El Problema */}
       <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px - 23px)', top: 0 }}>
           <SectionDot />
         </div>
         <Problem />
@@ -51,7 +51,7 @@ function App() {
 
       {/* Para quién */}
       <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px - 23px)', top: 0 }}>
           <SectionDot />
         </div>
         <Audience />
@@ -59,7 +59,7 @@ function App() {
 
       {/* Solución section (ProductDemo + Flow + Integrations) */}
       <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px - 23px)', top: 0 }}>
           <SectionDot />
         </div>
         <ProductDemo />
@@ -69,7 +69,7 @@ function App() {
 
       {/* Acceso / Únete */}
       <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px - 23px)', top: 0 }}>
           <SectionDot />
         </div>
         <CTA />
