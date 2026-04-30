@@ -48,7 +48,7 @@ const CARD_W = 190, CARD_H = 38, CARD_R = 7
 
 export function Integrations() {
   return (
-    <section id="integraciones" className="py-24 border-y border-white/[0.06] bg-[var(--color-bg-secondary)]">
+    <section className="pb-24 pt-12 relative" style={{ background: 'radial-gradient(ellipse at center, rgba(0, 180, 216, 0.06) 0%, transparent 70%)' }}>
       <div className="max-w-[1200px] mx-auto px-8">
         <motion.div
           className="text-center mb-16"

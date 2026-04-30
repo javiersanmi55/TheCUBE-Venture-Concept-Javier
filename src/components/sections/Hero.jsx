@@ -1,25 +1,26 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
-import { Clock, FileText, Mic, StickyNote, LayoutGrid, ArrowRight, CheckCircle } from 'lucide-react'
+import { Clock, FileText, Mic, StickyNote, LayoutGrid, ArrowRight, CheckCircle, Folder } from 'lucide-react'
 
 function WorkshopFlowVisual() {
   const inputs = [
-    { icon: LayoutGrid, label: 'Board Miro', color: 'text-yellow-400', bg: 'bg-yellow-400/10 border-yellow-400/20' },
-    { icon: Mic, label: 'Transcript Granola', color: 'text-blue-400', bg: 'bg-blue-400/10 border-blue-400/20' },
-    { icon: StickyNote, label: 'Notas del taller', color: 'text-purple-400', bg: 'bg-purple-400/10 border-purple-400/20' },
-    { icon: FileText, label: 'Agenda SessionLab', color: 'text-emerald-400', bg: 'bg-emerald-400/10 border-emerald-400/20' },
+    { icon: LayoutGrid, label: 'Pizarras digitales', color: 'text-yellow-400', bg: 'bg-yellow-400/10 border-yellow-400/20' },
+    { icon: Mic, label: 'Transcripciones de reuniones', color: 'text-blue-400', bg: 'bg-blue-400/10 border-blue-400/20' },
+    { icon: FileText, label: 'Agendas', color: 'text-emerald-400', bg: 'bg-emerald-400/10 border-emerald-400/20' },
+    { icon: StickyNote, label: 'Notas del workshop', color: 'text-purple-400', bg: 'bg-purple-400/10 border-purple-400/20' },
+    { icon: Folder, label: 'Otros archivos estratégicos', color: 'text-slate-400', bg: 'bg-slate-400/10 border-slate-400/20' },
   ]
   return (
     <div className="flex items-center justify-center gap-6 w-full max-w-3xl mx-auto mt-12 hero-enter hero-enter-5">
       <div className="flex-1">
         <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-3 text-center font-semibold">Workshop outputs</p>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-3 overflow-visible h-auto justify-items-center">
           {inputs.map((item, i) => {
             const Icon = item.icon
             return (
               <div
                 key={item.label}
-                className={`flex flex-col items-center gap-1.5 p-3 rounded-xl border backdrop-blur-sm ${item.bg} ${i === 1 ? 'translate-y-2' : ''} ${i === 3 ? '-translate-y-1' : ''}`}
+                className={`flex flex-col items-center justify-center gap-1.5 p-3 rounded-xl border backdrop-blur-sm text-center w-full ${item.bg} ${i === 4 ? 'col-span-2 w-3/4 mx-auto' : ''}`}
               >
                 <Icon size={20} className={item.color} strokeWidth={1.5} />
                 <span className="text-[9px] text-slate-400 text-center leading-tight">{item.label}</span>

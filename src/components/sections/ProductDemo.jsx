@@ -167,8 +167,8 @@ export function ProductDemo() {
   const [inputVal, setInputVal] = useState('')
 
   return (
-    <section id="producto" className="py-24">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section className="py-24">
+      <div id="producto" className="max-w-[1200px] mx-auto px-8">
         <motion.div
           className="text-center mb-14"
           initial={{ opacity: 0, y: 20 }}

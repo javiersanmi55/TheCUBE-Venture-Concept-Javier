@@ -5,8 +5,8 @@ import { FlaskConical } from 'lucide-react'
 
 export function CTA() {
   return (
-    <section id="cta" className="py-28">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section className="py-28">
+      <div id="cta" className="max-w-[1200px] mx-auto px-8">
         <motion.div
           className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)] p-16 md:p-20 text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -23,8 +23,11 @@ export function CTA() {
               <br />
               <span className="text-[var(--color-accent-cyan)]">Escala tu facilitación hoy.</span>
             </h2>
-            <p className="text-[var(--color-text-secondary)] mb-8">
+            <p className="text-[var(--color-text-secondary)] mb-4">
               Únete a la beta exclusiva para consultoras de estrategia y facilitadores profesionales.
+            </p>
+            <p className="text-[11px] text-slate-400 mb-8">
+              Más de 40 horas de trabajo estratégico recuperadas por taller. Sé el primero en usarlo.
             </p>
             <form
               className="flex flex-col sm:flex-row gap-4"
