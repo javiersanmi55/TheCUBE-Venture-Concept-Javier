@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+@theme {
+  /* Slate & Indigo Palette */
+  --color-bg-primary: #020617;
+  --color-bg-secondary: #0F172A;
+  --color-bg-card: rgba(30, 41, 59, 0.6);
+  --color-bg-app: #0D1526;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-text-tertiary: #64748B;
+  --color-accent-indigo: #4F46E5;
+  --color-accent-indigo-light: #6366F1;
+  --color-accent-cyan: #06B6D4;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.15);
+  --color-glow-indigo: rgba(79, 70, 229, 0.3);
+  --color-glow-cyan: rgba(6, 182, 212, 0.2);
+  --color-sidebar: #080F1E;
+
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, var(--color-accent-indigo-light) 0%, var(--color-accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass card base */
+.glass-card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-indigo), var(--color-accent-cyan), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+/* ─── MARQUEE ─────────────────────────────────────────── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+/* ─── SYNTHEX BOX SCROLLBAR ───────────────────────────── */
+.synthex-chat-scroll {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79, 70, 229, 0.4) transparent;
+}
+
+.synthex-chat-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.synthex-chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.synthex-chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(79, 70, 229, 0.5);
+  border-radius: 10px;
+}
+
+.synthex-chat-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
+
+/* ─── APP MOCK SCROLLBAR ──────────────────────────────── */
+.app-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+.app-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.app-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.app-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 4px;
+}
+
+/* ─── CODE/MONO INLINE ────────────────────────────────── */
+.mono {
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.8em;
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: #a5b4fc;
+}
+
+/* ─── STATUS BADGES ───────────────────────────────────── */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background: rgba(6, 182, 212, 0.1);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.status-pending {
+  background: rgba(234, 179, 8, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(234, 179, 8, 0.25);
+}
+
+.status-done {
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+/* ─── TYPING CURSOR ANIMATION ─────────────────────────── */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--color-accent-cyan);
+  vertical-align: text-bottom;
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+/* ─── HERO MICRO-ANIMATIONS ──────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-enter {
+  opacity: 0;
+  animation: fadeInUp 600ms ease-out forwards;
+}
+.hero-enter-1 { animation-delay: 0ms; }
+.hero-enter-2 { animation-delay: 150ms; }
+.hero-enter-3 { animation-delay: 300ms; }
+.hero-enter-4 { animation-delay: 450ms; }
+.hero-enter-5 { animation-delay: 600ms; }
+
+/* ─── SECTION DIVIDER ────────────────────────────────────────────── */
+@keyframes soft-ping {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  75%  { transform: scale(2.5); opacity: 0; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.soft-ping { animation: soft-ping 2.8s ease-out infinite; }
