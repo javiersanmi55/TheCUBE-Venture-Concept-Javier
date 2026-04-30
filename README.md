@@ -15,9 +15,9 @@
 
 Cuando un taller estratégico termina, el equipo consultor tiene sobre la mesa: un board de Miro lleno de clusters, un transcript de horas de Granola u Otter, y una agenda con notas dispersas en SessionLab o Notion.
 
-Transformar todo eso en un entregable ejecutivo —una narrativa estratégica, un decision log, un portfolio de apuestas, borradores de OKR— se hace **a mano, en PowerPoint o Notion, durante 6-8 horas**. Por cada taller. Por cada cliente. Cada mes.
+Transformar todo eso en un entregable ejecutivo —una narrativa estratégica, un decision log, un portfolio de apuestas, borradores de OKR— se hace **a mano, en PowerPoint o Notion, consumiendo horas no facturadas perdidas**. Por cada taller. Por cada cliente. Cada mes.
 
-Las herramientas actuales (Miro AI, Granola, Copilot, Otter) capturan y resumen bien. Pero **ninguna sintetiza con criterio estratégico**. El consultor senior sigue siendo el puente entre lo que se dijo en sala y lo que finalmente se ejecuta.
+Las herramientas actuales (Miro AI, Granola, Copilot, Otter) capturan el momento y resumen todo bien. Pero **ninguna sintetiza con criterio estratégico**, asegurando una alineación tras el workshop. El consultor senior sigue siendo el puente entre lo que se dijo en sala y lo que finalmente se termina ejecutando.
 
 ---
 
@@ -34,9 +34,8 @@ El consultor conecta sus fuentes, elige el tipo de entregable, y Synthex genera 
 | # | Diferenciador | Qué significa en la práctica |
 |---|--------------|------------------------------|
 | 1 | **Síntesis estratégica, no resúmenes** | Genera decision logs, bet portfolios y OKR drafts con estructura predefinida, no transcripciones reformateadas |
-| 2 | **Trazabilidad fuente a entregable** | Cada afirmación del output está enlazada al fragmento exacto del taller donde se generó |
-| 3 | **Neutral entre plataformas** | Se integra con Miro, Granola, Otter, SessionLab, Notion sin reemplazar ninguno |
-| 4 | **Plantillas por tipo de taller** | El sistema distingue entre un taller de visión, uno de priorización y uno de alineación ejecutiva |
+| 2 | **Trazabilidad fuente a entregable** | Cada afirmación del output está enlazada al fragmento exacto del taller o del archivo donde se generó |
+| 3 | **Neutral entre plataformas** | Se integra con una diversidad de herramientas sin reemplazar el trabajo de ninguno |
 
 ---
 
@@ -80,7 +79,7 @@ Este repositorio contiene la landing page conceptual de Synthex, desarrollada co
 El reto consistía en: identificar un dominio de IA con un gap claro de mercado, desarrollar un concepto de venture con nombre, propuesta de valor y diferenciadores clave, y presentarlo en el formato considerado más adecuado para comunicar la idea.
 
 **Herramientas utilizadas en el proceso:**
-- Investigación de mercado: Perplexity, Gemini Pro
+- Investigación de mercado: Perplexity, Claude, Gemini Pro
 - Desarrollo del concepto: Claude Sonnet 4.6
 - Construcción de la landing: Antigravity, GitHub Pages
 
