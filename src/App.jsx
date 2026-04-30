@@ -10,11 +10,11 @@ import { CTA } from '@/components/sections/CTA'
 // ── Improvement 3: Section dot marker on the timeline line ────────────
 function SectionDot() {
   return (
-    <div className="hidden xl:flex items-center select-none pointer-events-none">
-      {/* The dot sits exactly on the line, vertically centered on its position */}
-      <div className="relative w-5 h-5 flex items-center justify-center -translate-y-1/2">
-        <div className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
-        <div className="absolute inset-0 rounded-full border border-cyan-400/30 animate-ping" style={{ animationDuration: '2.5s' }} />
+    <div className="hidden xl:flex items-center select-none pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      {/* The dot sits exactly on the line, perfectly centered */}
+      <div className="relative w-4 h-4 flex items-center justify-center">
+        <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,1)]" />
+        <div className="absolute inset-0 rounded-full border border-cyan-400/40 animate-ping" style={{ animationDuration: '2.5s' }} />
       </div>
     </div>
   )
@@ -41,19 +41,9 @@ function App() {
         <Hero />
       </section>
 
-      {/* Solución section (ProductDemo + Flow + Integrations) */}
-      <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 28px)', top: '6rem' }}>
-          <SectionDot />
-        </div>
-        <ProductDemo />
-        <FlowVisualization />
-        <Integrations />
-      </div>
-
       {/* El Problema */}
       <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 28px)', top: '6rem' }}>
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
           <SectionDot />
         </div>
         <Problem />
@@ -61,15 +51,25 @@ function App() {
 
       {/* Para quién */}
       <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 28px)', top: '6rem' }}>
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
           <SectionDot />
         </div>
         <Audience />
       </div>
 
+      {/* Solución section (ProductDemo + Flow + Integrations) */}
+      <div className="relative">
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
+          <SectionDot />
+        </div>
+        <ProductDemo />
+        <FlowVisualization />
+        <Integrations />
+      </div>
+
       {/* Acceso / Únete */}
       <div className="relative">
-        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 28px)', top: '7rem' }}>
+        <div className="hidden xl:block absolute" style={{ left: 'calc(50% - 600px + 32.5px)', top: 0 }}>
           <SectionDot />
         </div>
         <CTA />
