@@ -19,9 +19,9 @@ export function CTA() {
 
           <div className="relative z-10 max-w-xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4">
-              Deja de sintetizar workshops a mano.
+              El workshop ha finalizado, ahora toca pasar a la acción.
               <br />
-              <span className="text-[var(--color-accent-cyan)]">Escala tu facilitación hoy.</span>
+              <span className="text-[var(--color-accent-cyan)]">Busquemos alinear la estrategia juntos.</span>
             </h2>
             <p className="text-[var(--color-text-secondary)] mb-4">
               Únete a la beta exclusiva para consultoras de estrategia y facilitadores profesionales.

@@ -57,7 +57,7 @@ const okrs = [
     objective: 'O1: Capturar 15% del mercado LATAM en 6 meses',
     krs: [
       { text: 'KR1: Lanzar en México antes del 30 de sep', progress: 40 },
-      { text: 'KR2: Cerrar 3 partnerships locales', progress: 20 },
+      { text: 'KR2: Cerrar 5 partnerships locales', progress: 20 },
     ],
   },
   {
@@ -362,8 +362,8 @@ export function ProductDemo() {
                       </div>
                     )}
                     <div className={`max-w-[85%] rounded-xl px-3 py-2.5 ${msg.role === 'user'
-                        ? 'bg-indigo-600/70 border border-indigo-500/30 text-right'
-                        : 'bg-white/[0.04] border border-white/[0.07]'
+                      ? 'bg-indigo-600/70 border border-indigo-500/30 text-right'
+                      : 'bg-white/[0.04] border border-white/[0.07]'
                       }`}>
                       {msg.role === 'user'
                         ? <p className="text-[11px] text-slate-200 leading-relaxed">{msg.text}</p>
