@@ -30,7 +30,7 @@ const steps = [
   {
     icon: Target,
     label: 'Ejecución',
-    description: 'Exportación directa a Notion, Asana o Jira',
+    description: 'Exportación directa a tu plataforma favorita',
     color: 'text-emerald-400',
     bg: 'bg-emerald-950/40',
     border: 'border-emerald-500/25',
